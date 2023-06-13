@@ -17,7 +17,7 @@ namespace Basics.Concepts
         //Accessible everywhere
     }
 
-    public abstract class AbstracClass
+    public abstract class AbstractClass
     {
         //cannot be used to create objects (to access it, it must be inherited from another class).
     }
@@ -39,7 +39,32 @@ namespace Basics.Concepts
 
     public static class StaticClass
     {
+        public static void staticMethod() { }
         //is similar to a class that is both abstract and sealed. The difference between a static class and a non-static class is that a static class cannot be instantiated or inherited.
     }
+
+    public class ParentClass : PublicClass
+    {
+        //inherited another class
+    }
+
+    public class ParentFromAbstractClass : AbstractClass
+    {
+        //abstract class only can be inherited
+    }
+
+    public interface IInterface //An interface provides a skeleton of a class that must be implemented by the inherited clas
+    {
+        void MethodToImplement();  //It enforces derived classes to implement certain functionality.
+    }
+
+    public class ClassDefinedByInterface : IInterface
+    {
+        public void MethodToImplement()
+        {
+            //code
+        }
+    }
+
 }
 
