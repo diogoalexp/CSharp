@@ -8,7 +8,7 @@ namespace Test.Concepts
         [Fact]
         public void Members_Modifiers()
         {
-            MembersModifiers membersModifiers = new MembersModifiers() { Required  = 0};
+            MembersModifiers membersModifiers = new MembersModifiers() { Required = 0 };
 
             membersModifiers.Public = 1;
 
@@ -74,6 +74,69 @@ namespace Test.Concepts
             Assert.IsType<Boolean>(membersFields.Field_Boolean);
             Assert.IsType<Char>(membersFields.Field_Char);
             Assert.IsType<String>(membersFields.Field_String);
+        }
+
+        [Fact]
+        public void Members_Properties()
+        {
+            MembersProperties membersProperties = new MembersProperties();
+            membersProperties.Name = "Teste";
+
+            Assert.Equal("Teste", membersProperties.Name);
+        }
+
+        [Fact]
+        public void Members_Enumerations()
+        {
+            MembersEnumerations membersEnumerations0 = MembersEnumerations.Option_0;
+            MembersEnumerations membersEnumerations1 = MembersEnumerations.Option_1;
+            MembersEnumerations membersEnumerations2 = MembersEnumerations.Option_2;
+            MembersEnumerations membersEnumerations3 = MembersEnumerations.Option_3;
+
+            Assert.Equal(MembersEnumerations.Option_0, membersEnumerations0);
+            Assert.Equal(MembersEnumerations.Option_1, membersEnumerations1);
+            Assert.Equal(MembersEnumerations.Option_2, membersEnumerations2);
+            Assert.Equal(MembersEnumerations.Option_3, membersEnumerations3);
+        }
+
+        [Fact]
+        public void Members_Structs()
+        {
+            MembersStructs membersStructs = new MembersStructs();
+            membersStructs.X = 0.1;
+            membersStructs.Y = 0.2;
+
+            Assert.Equal(0.1, membersStructs.X);
+            Assert.Equal(0.2, membersStructs.Y);
+        }
+
+        [Fact]
+        public void Members_Methods()
+        {
+            MembersMethods membersMethods = new MembersMethods();
+            int result_2 = membersMethods.add(1, 1);
+            int result_3 = membersMethods.add(1, 1, 1);
+
+            Assert.Equal(2, result_2);
+            Assert.Equal(3, result_3);
+        }
+
+        [Fact]
+        public void Members_Override()
+        {
+            MembersOverride membersOverride = new MembersOverride();
+            
+            Assert.Equal(500, membersOverride.value());
+        }
+
+        [Fact]
+        public void Members_Constructur()
+        {
+            MembersConstructor membersConstructorDefault = new MembersConstructor();
+            MembersConstructor membersConstructor = new MembersConstructor("new name");
+
+            Assert.Equal("default name", membersConstructorDefault.name);
+            Assert.Equal("new name", membersConstructor.name);
         }
     }
 }

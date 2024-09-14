@@ -65,8 +65,8 @@
 
     public struct MembersStructs // is a value type that can encapsulate data and related functionality
     {
-        public double X { get; }
-        public double Y { get; }
+        public double X;
+        public double Y;
     }
 
     public class MembersMethods //is usually a code snippet that does a specific task; 
@@ -96,8 +96,6 @@
         }
     }
 
-
-
     public class MembersConstructor // is a special method that is used to initialize objects.
     {
         public string name;  // Create a field
@@ -112,7 +110,5 @@
             name = newValue; // Set the new value for name
         }
     }
-
-
 
 }
