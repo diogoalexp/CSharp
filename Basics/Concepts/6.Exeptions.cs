@@ -3,9 +3,18 @@
     public class Exeptions
     {
 
-        public void Exception()
+        public void ThrowException()
         {
-            throw new Exception();
+            try
+            {
+                throw new Exception("First Value;");
+            }
+            catch (Exception e)
+            {
+
+                throw new Exception(e.Message + "Second Value;");
+            }
+            
         }
 
         #region System.Exception
