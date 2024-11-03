@@ -1,15 +1,6 @@
 ﻿using Basics.Concepts;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 
-
-
-namespace Test.Basics
+namespace Test.Concepts
 {
     public class StatementsTest
     {
@@ -92,7 +83,7 @@ namespace Test.Basics
         {
             Statements statements = new Statements();
 
-            Assert.Equal(statements.breakAndContinueStatement(x,y,z), expected);
+            Assert.Equal(statements.breakAndContinueStatement(x, y, z), expected);
         }
     }
 }
