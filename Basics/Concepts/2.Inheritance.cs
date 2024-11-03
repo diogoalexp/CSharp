@@ -10,7 +10,7 @@
         //has all properties from the PublicClass
     }
 
-    public class InheritanceClassFromAbstractClass : AbstracClass
+    public class InheritanceClassFromAbstractClass : AbstractClass
     {
         //has all properties from the AbstracClass
     }

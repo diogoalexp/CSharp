@@ -41,7 +41,7 @@ namespace Test.Concepts
             InheritanceClassFromPartialClass inheritanceClassFromPartialClass = new InheritanceClassFromPartialClass();
 
             Assert.IsAssignableFrom<PublicClass>(inheritanceClassFromPublicClass);
-            Assert.IsAssignableFrom<AbstracClass>(inheritanceClassFromAbstractClass);
+            Assert.IsAssignableFrom<AbstractClass>(inheritanceClassFromAbstractClass);
             Assert.IsAssignableFrom<PartialClass>(inheritanceClassFromPartialClass);
         }
     }
